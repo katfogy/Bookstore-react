@@ -1,7 +1,5 @@
 import Books from './Books';
 
-const Homepage = () => (
-  <Books />
-);
+const HomePage = () => (<Books />);
 
-export default Homepage;
+export default HomePage;
