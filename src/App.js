@@ -6,7 +6,7 @@ import CategoryPage from './components/CategoryPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Apps">
       <Router>
         <>
           <NavMenu />
