@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import booksList from './data';
 import BookForm from './BookForm';
+import Book from './Book';
 
 const Books = () => {
   const [books, setBooks] = useState(booksList);
@@ -8,18 +9,15 @@ const Books = () => {
   const handleAddBook = (newBook) => {
     setBooks([...books, newBook]);
   };
+
+  const deleteBook = (id) => {
+    setBooks(books.filter((book) => book.id !== id));
+  };
   return (
     <div>
       <BookForm handleAddBook={handleAddBook} />
       {
-                    books.map((book) => (
-                      <li key={book.id}>
-                        <div className="book">
-                          <h3>{book.title}</h3>
-                          <p>{book.author}</p>
-                        </div>
-                      </li>
-                    ))
+                    books.map((book) => <Book key={book.id} deleteBook={deleteBook} book={book} />)
                 }
     </div>
   );

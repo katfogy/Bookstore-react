@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const BookForm = (prop) => {
   const { handleAddBook } = prop;
@@ -11,7 +12,7 @@ const BookForm = (prop) => {
       setError('Enter Book Title and Author');
       return;
     }
-    handleAddBook({ title, author });
+    handleAddBook({ id: uuidv4(), title, author });
     setTitle('');
     setAuthor('');
   };
