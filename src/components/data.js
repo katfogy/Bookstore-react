@@ -5,7 +5,7 @@ const booksList = [
     id: 1,
   },
   {
-    author: 'Waiter Van Stight',
+    author: 'Waiter Van',
     title: 'Success in Mathematics',
     id: 2,
   },
