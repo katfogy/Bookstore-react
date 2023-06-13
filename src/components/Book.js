@@ -1,13 +1,22 @@
-const Book = (prop) => {
-  const { book, deleteBook } = prop;
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
+
+export default function BookItem(prop) {
+  const dispatch = useDispatch();
+  const { id, title } = prop;
+
+  const handleDelete = () => {
+    dispatch(removeBook({ id }));
+  };
+
   return (
     <li>
-      <div className="book">
-        <h3>{book.title}</h3>
-        <p>{book.author}</p>
+      <div>
+        <p>{title}</p>
+        <button type="button" onClick={handleDelete}>
+          Delete
+        </button>
       </div>
-      <button type="button" onClick={() => deleteBook(book.id)}>Delete</button>
     </li>
   );
-};
-export default Book;
+}

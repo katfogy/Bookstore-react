@@ -1,26 +1,19 @@
-import React, { useState } from 'react';
-import booksList from './data';
+import { useSelector } from 'react-redux';
 import BookForm from './BookForm';
 import Book from './Book';
 
-const Books = () => {
-  const [books, setBooks] = useState(booksList);
+export default function BookList() {
+  const { bookItems } = useSelector((store) => store.books);
 
-  const handleAddBook = (newBook) => {
-    setBooks([...books, newBook]);
-  };
-
-  const deleteBook = (id) => {
-    setBooks(books.filter((book) => book.id !== id));
-  };
   return (
     <div>
-      <BookForm handleAddBook={handleAddBook} />
-      {
-                    books.map((book) => <Book key={book.id} deleteBook={deleteBook} book={book} />)
-                }
+      <BookForm />
+      <h3>List of books:</h3>
+      <ul>
+        {bookItems.map((book) => (
+          <Book key={book.id} id={book.id} title={book.title} />
+        ))}
+      </ul>
     </div>
   );
-};
-
-export default Books;
+}
