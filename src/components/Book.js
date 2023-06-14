@@ -3,7 +3,7 @@ import { removeBook } from '../redux/books/booksSlice';
 
 export default function BookItem(prop) {
   const dispatch = useDispatch();
-  const { id, title, author } = prop;
+  const { book: { author, title }, id } = prop;
 
   const handleDelete = () => {
     dispatch(removeBook({ id }));
