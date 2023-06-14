@@ -11,7 +11,7 @@ export default function BookList() {
       <h3>List of books:</h3>
       <ul>
         {bookItems.map((book) => (
-          <Book key={book.id} id={book.id} title={book.title} />
+          <Book key={book.id} id={book.id} author={book.author} title={book.title} />
         ))}
       </ul>
     </div>
