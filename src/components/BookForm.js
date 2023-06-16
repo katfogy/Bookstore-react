@@ -25,12 +25,12 @@ export default function BookInput() {
 
   return (
     <>
-      <h3>Add a new book:</h3>
-      <form onSubmit={addNewBook}>
-        <input type="text" placeholder="Enter Book Title" name="title" value={book.title} onChange={handleChange} />
-        <input type="text" placeholder="Enter Book Author" name="author" value={book.author} onChange={handleChange} />
-        <input type="text" placeholder="Enter Book Category" name="category" value={book.category} onChange={handleChange} />
-        <button type="submit">Add</button>
+      <h3 className="center py-5">Add a new book:</h3>
+      <form onSubmit={addNewBook} className="form-control center">
+        <input type="text" placeholder="Enter Book Title" name="title" value={book.title} onChange={handleChange} className="input-control" />
+        <input type="text" placeholder="Enter Book Author" name="author" value={book.author} onChange={handleChange} className="input-control" />
+        <input type="text" placeholder="Enter Book Category" name="category" value={book.category} onChange={handleChange} className="input-control" />
+        <button type="submit" className="btn">Add</button>
       </form>
     </>
   );

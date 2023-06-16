@@ -33,13 +33,13 @@ export default function BookList() {
   }
 
   return (
-    <div>
+    <div className="container-center">
       <BookForm />
       <p>{postStatus.loading ? 'Posting...' : ''}</p>
       <p>{delStatus.loading ? 'Deleting...' : ''}</p>
       <pre>{postStatus.error ? postStatus.errMsg : ''}</pre>
       <pre>{delStatus.error ? delStatus.errMsg : ''}</pre>
-      <h3>List of books:</h3>
+      <h3 className="center py-5">List of books:</h3>
       <ul>
         {bookItems.map((book) => (
           <Book key={book.id} id={book.id} book={book} />

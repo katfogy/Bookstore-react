@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom';
 
 const NavMenu = () => (
   <header>
-    <nav>
+    <nav className="container-center">
       <h1>BookStore</h1>
-      <ul>
+      <ul className="menu-list">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
