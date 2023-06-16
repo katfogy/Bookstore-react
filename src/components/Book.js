@@ -18,7 +18,7 @@ export default function BookItem(prop) {
     <li>
       <div className="book">
         <div className="details">
-          <p>{category}</p>
+          <p className="current-chapter">{category}</p>
           <h3 className="title">{title}</h3>
           <p>{author}</p>
           <div className="btn-func">
@@ -46,7 +46,7 @@ export default function BookItem(prop) {
           % completed
         </p>
         <div className="chapter-details">
-          <p>Current Chapter</p>
+          <p className="current-chapter">Current Chapter</p>
           <h4>{getDummyChapter()}</h4>
           <button type="button" className="progress-btn">Update Progress</button>
         </div>
