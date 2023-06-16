@@ -33,12 +33,11 @@ export default function BookList() {
   }
 
   return (
-    <div className="container-center">
+    <div className="container-center mt-5">
       <p>{postStatus.loading ? 'Posting...' : ''}</p>
       <p>{delStatus.loading ? 'Deleting...' : ''}</p>
       <pre>{postStatus.error ? postStatus.errMsg : ''}</pre>
       <pre>{delStatus.error ? delStatus.errMsg : ''}</pre>
-      <h3 className="center py-5">List of books:</h3>
       <ul>
         {bookItems.map((book) => (
           <Book key={book.id} id={book.id} book={book} />

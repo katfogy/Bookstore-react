@@ -43,7 +43,7 @@ export default function BookItem(prop) {
           {
             getDummyProgress()
           }
-          %
+          % completed
         </p>
         <div className="chapter-details">
           <p>Current Chapter</p>
