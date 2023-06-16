@@ -1,65 +1,70 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   padding: 10px;
   overflow-x: hidden;
 }
-.container-center{
+
+.container-center {
   max-width: 1000px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
-li{
+li {
   list-style-type: none;
 }
-header{
+
+header {
   background-color: #ffff;
- height: 80px;
+  height: 80px;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
-  padding:20px 0px;
+  padding: 20px 0;
 }
 
-.menu-list{
+.menu-list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-a{
+
+a {
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
-.menu-list li{
-  list-style-type: none;
 
+.menu-list li {
+  list-style-type: none;
 }
 
-.center{
+.center {
   text-align: center;
 }
 
-.py-5{
+.py-5 {
   padding-block: 20px;
 }
-.form-control{
+
+.form-control {
   width: 100%;
 }
-.input-control{
-min-width: 80%;
-padding: 10px;
-margin-bottom: 10px;
-border-radius: 5px;
+
+.input-control {
+  min-width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.btn{
+.btn {
   display: block;
   padding: 10px 20px;
   width: 20%;
@@ -71,7 +76,7 @@ border-radius: 5px;
   color: #ffff;
 }
 
-.book{
+.book {
   display: flex;
   justify-content: space-between;
   max-width: 95%;
@@ -79,7 +84,7 @@ border-radius: 5px;
   gap: 5px;
 }
 
-.btn-delete{
+.btn-delete {
   padding: 20px;
   cursor: pointer;
   background-color: rgb(66, 66, 219);
@@ -89,6 +94,6 @@ border-radius: 5px;
   align-self: center;
 }
 
-.details>*{
+.details > * {
   margin-block: 5px;
 }
