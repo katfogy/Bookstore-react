@@ -182,6 +182,7 @@ form > * {
   border-radius: 5px;
   font-family: inherit;
   cursor: pointer;
+  display: inline;
 }
 
 .add-book {
