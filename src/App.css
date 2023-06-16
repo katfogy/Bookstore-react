@@ -168,6 +168,8 @@ form > * {
 .chapter-details {
   display: flex;
   flex-direction: column;
+  border-left: 2px solid gainsboro;
+  padding-inline: 20px;
 }
 
 .chapter-details > * {
