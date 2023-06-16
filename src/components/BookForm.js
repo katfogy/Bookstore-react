@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { postBook } from '../redux/books/booksSlice';
+import { getDummyAuthor } from '../dummies';
 
 export default function BookInput() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ export default function BookInput() {
     e.preventDefault();
     setBook({
       ...book,
+      author: getDummyAuthor(),
       [e.target.name]: e.target.value,
     });
   };
@@ -26,10 +28,18 @@ export default function BookInput() {
   return (
     <>
       <h3 className="center py-5">Add a new book:</h3>
-      <form onSubmit={addNewBook} className="form-control center">
+      <form onSubmit={addNewBook}>
         <input type="text" placeholder="Enter Book Title" name="title" value={book.title} onChange={handleChange} className="input-control" />
-        <input type="text" placeholder="Enter Book Author" name="author" value={book.author} onChange={handleChange} className="input-control" />
-        <input type="text" placeholder="Enter Book Category" name="category" value={book.category} onChange={handleChange} className="input-control" />
+        <select
+          className="select"
+          name="category"
+          value={book.category}
+          onChange={handleChange}
+        >
+          <option value="action">action</option>
+          <option value="science fiction">science fiction</option>
+          <option value="economy">economy</option>
+        </select>
         <button type="submit" className="btn">Add</button>
       </form>
     </>

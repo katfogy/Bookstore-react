@@ -34,7 +34,6 @@ export default function BookList() {
 
   return (
     <div className="container-center">
-      <BookForm />
       <p>{postStatus.loading ? 'Posting...' : ''}</p>
       <p>{delStatus.loading ? 'Deleting...' : ''}</p>
       <pre>{postStatus.error ? postStatus.errMsg : ''}</pre>
@@ -45,6 +44,7 @@ export default function BookList() {
           <Book key={book.id} id={book.id} book={book} />
         ))}
       </ul>
+      <BookForm />
     </div>
   );
 }

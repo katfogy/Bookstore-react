@@ -5,13 +5,20 @@
 }
 
 body {
-  padding: 10px;
   overflow-x: hidden;
+  background-color: gainsboro;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .container-center {
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 li {
@@ -38,8 +45,18 @@ nav {
 a {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.user {
+  border: 1px solid rgb(66, 66, 219);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 1.8rem;
   color: rgb(66, 66, 219);
 }
 
@@ -51,25 +68,40 @@ a {
   text-align: center;
 }
 
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+form > * {
+  margin-right: 15px;
+}
+
 .py-5 {
   padding-block: 20px;
 }
 
 .form-control {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .input-control {
-  min-width: 80%;
-  padding: 10px;
+  min-width: 40%;
+  padding: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(66, 66, 219);
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  font-family: inherit;
 }
 
 .btn {
-  display: block;
-  padding: 10px 20px;
+  padding: 15px 20px;
   width: 20%;
   margin: 0 auto;
   cursor: pointer;
@@ -77,6 +109,8 @@ a {
   border: none;
   border-radius: 5px;
   color: #ffff;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 .book {
@@ -85,18 +119,67 @@ a {
   max-width: 95%;
   margin: 10px auto;
   gap: 5px;
+  background-color: #ffff;
+  padding: 20px;
+  align-items: center;
 }
 
-.btn-delete {
-  padding: 20px;
-  cursor: pointer;
-  background-color: rgb(66, 66, 219);
-  border: none;
-  border-radius: 5px;
-  color: #ffff;
-  align-self: center;
+.details {
+  display: flex;
+  flex-direction: column;
 }
 
 .details > * {
   margin-block: 5px;
+  align-self: flex-start;
+}
+
+.select {
+  padding: 15px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  align-self: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.circle {
+  width: 80px;
+  font-weight: bolder;
+}
+
+.btn-single {
+  background-color: #ffff;
+  border: none;
+  font-family: inherit;
+  color: rgb(66, 66, 219);
+  padding-inline: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-right: 2px solid gainsboro;
+}
+
+.title {
+  color: rgb(66, 66, 219);
+  font-size: 1.3rem;
+}
+
+.chapter-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-details > * {
+  margin-block: 5px;
+}
+
+.progress-btn {
+  background-color: rgb(66, 66, 219);
+  padding: 15px 20px;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  cursor: pointer;
 }
