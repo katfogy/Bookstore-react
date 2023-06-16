@@ -1,6 +1,6 @@
 const CategoryPage = () => (
   <div className="container-center">
-    <h1>category Page</h1>
+    <h4>Category Page</h4>
   </div>
 );
 

@@ -11,11 +11,13 @@ export default function BookItem(prop) {
 
   return (
     <li>
-      <div>
-        <h3>{title}</h3>
-        <h4>{author}</h4>
-        <p>{category}</p>
-        <button type="button" onClick={handleDelete}>
+      <div className="book">
+        <div className="details">
+          <h3>{title}</h3>
+          <p>{author}</p>
+        </div>
+        <h4>{category}</h4>
+        <button type="button" onClick={handleDelete} className="btn-delete">
           Delete
         </button>
       </div>
