@@ -57,8 +57,9 @@
 
 <!-- Features -->
 ### Key Features 
-- **[Project was created with React]**
-- **[Quotes was fetched from API]**
+- **[Display a list of books]**
+- **[Add a book]**
+- **[Remove a selected book]**
 - **[Pages are routed with react router]**
 
 
