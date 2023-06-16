@@ -27,7 +27,7 @@ export default function BookInput() {
 
   return (
     <>
-      <h3 className="center py-5">Add a new book:</h3>
+      <h3 className="add-book">Add a new book:</h3>
       <form onSubmit={addNewBook}>
         <input type="text" placeholder="Enter Book Title" name="title" value={book.title} onChange={handleChange} className="input-control" />
         <select

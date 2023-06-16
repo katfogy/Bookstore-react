@@ -183,3 +183,9 @@ form > * {
   font-family: inherit;
   cursor: pointer;
 }
+
+.add-book {
+  text-align: center;
+  margin-block: 20px;
+  color: rgb(92, 81, 81);
+}
