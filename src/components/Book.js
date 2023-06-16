@@ -13,10 +13,10 @@ export default function BookItem(prop) {
     <li>
       <div className="book">
         <div className="details">
+          <p>{category}</p>
           <h3>{title}</h3>
           <p>{author}</p>
         </div>
-        <h4>{category}</h4>
         <button type="button" onClick={handleDelete} className="btn-delete">
           Delete
         </button>
