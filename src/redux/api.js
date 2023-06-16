@@ -1,5 +1,5 @@
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
-const key=`WAj3ixeMoC8YkvVZjih5`;
+const key = 'WAj3ixeMoC8YkvVZjih5';
 const GET_BOOKS = `${baseUrl}/apps/${key}/books`;
 const POST_BOOK = `${baseUrl}/apps/${key}/books`;
 const DEL_BOOK = `${baseUrl}/apps/${key}/books`;
