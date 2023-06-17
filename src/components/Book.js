@@ -17,7 +17,7 @@ export default function BookItem(prop) {
   return (
     <li>
       <div className="book">
-        <div className="details">
+        <div className="d-flex details">
           <p className="current-chapter">{category}</p>
           <h3 className="title">{title}</h3>
           <p>{author}</p>
@@ -34,20 +34,32 @@ export default function BookItem(prop) {
             </button>
           </div>
         </div>
-        <p className="circle">
-          <CircularProgressbar
-            strokeWidth={5}
-            value={getDummyProgress()}
-          />
-          {' '}
-          {
+        <p className="d-flex-start g-5">
+          <div className="circle">
+            <CircularProgressbar
+              strokeWidth={5}
+              value={getDummyProgress()}
+            />
+            {' '}
+
+          </div>
+          <div>
+            <h3>
+              {' '}
+              {
             getDummyProgress()
           }
-          % completed
+              %
+              {' '}
+              <br />
+              completed
+            </h3>
+          </div>
+
         </p>
-        <div className="chapter-details">
-          <p className="current-chapter">Current Chapter</p>
-          <h4>{getDummyChapter()}</h4>
+        <div className="d-flex chapter-details">
+          <h5 className="current-chapter">Current Chapter</h5>
+          <p>{getDummyChapter()}</p>
           <button type="button" className="progress-btn">Update Progress</button>
         </div>
 

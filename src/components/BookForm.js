@@ -26,9 +26,9 @@ export default function BookInput() {
   };
 
   return (
-    <>
+    <div className="hr">
       <h3 className="add-book">Add a new book:</h3>
-      <form onSubmit={addNewBook}>
+      <form onSubmit={addNewBook} className="container-center">
         <input type="text" placeholder="Enter Book Title" name="title" value={book.title} onChange={handleChange} className="input-control" />
         <select
           className="select"
@@ -42,6 +42,6 @@ export default function BookInput() {
         </select>
         <button type="submit" className="btn">Add</button>
       </form>
-    </>
+    </div>
   );
 }

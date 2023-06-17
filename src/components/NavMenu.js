@@ -3,10 +3,10 @@ import user from '../user.png';
 
 const NavMenu = () => (
   <header>
-    <nav className="container-center">
-      <div className="left">
+    <nav className="d-flex container-center">
+      <div className="d-flex left">
         <h1 className="logo">BookStore CMS</h1>
-        <ul className="menu-list">
+        <ul className="d-flex menu-list">
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
