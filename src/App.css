@@ -228,3 +228,8 @@ select {
 .g-5 {
   gap: 10px;
 }
+
+.completed {
+  color: var(--dark-gray);
+  font-weight: 300;
+}

@@ -52,7 +52,7 @@ export default function BookItem(prop) {
               %
               {' '}
               <br />
-              completed
+              <div className="completed">completed</div>
             </h3>
           </div>
 
