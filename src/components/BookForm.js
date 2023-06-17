@@ -40,7 +40,7 @@ export default function BookInput() {
           <option value="science fiction">science fiction</option>
           <option value="economy">economy</option>
         </select>
-        <button type="submit" className="btn">Add</button>
+        <button type="submit" className="btn">Add Book</button>
       </form>
     </div>
   );
