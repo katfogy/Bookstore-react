@@ -1,9 +1,14 @@
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { useDispatch } from 'react-redux';
 import { delBook } from '../redux/books/booksSlice';
+import { getDummyProgress, getDummyChapter } from '../dummies';
 
 export default function BookItem(prop) {
   const dispatch = useDispatch();
-  const { book: { author, title, category }, id } = prop;
+  const {
+    book: { author, title, category }, id,
+  } = prop;
 
   const handleDelete = () => {
     dispatch(delBook(id));
@@ -11,13 +16,53 @@ export default function BookItem(prop) {
 
   return (
     <li>
-      <div>
-        <h3>{title}</h3>
-        <h4>{author}</h4>
-        <p>{category}</p>
-        <button type="button" onClick={handleDelete}>
-          Delete
-        </button>
+      <div className="book">
+        <div className="d-flex details">
+          <p className="current-chapter">{category}</p>
+          <h3 className="title">{title}</h3>
+          <p>{author}</p>
+          <div className="btn-func">
+            <button type="button" onClick={() => {}} className="btn-single">
+              Comment
+            </button>
+            <button type="button" onClick={handleDelete} className="btn-single">
+              Delete
+            </button>
+
+            <button type="button" onClick={() => {}} className="btn-single">
+              Edit
+            </button>
+          </div>
+        </div>
+        <p className="d-flex-start g-5">
+          <div className="circle">
+            <CircularProgressbar
+              strokeWidth={5}
+              value={getDummyProgress()}
+            />
+            {' '}
+
+          </div>
+          <div>
+            <h3>
+              {' '}
+              {
+            getDummyProgress()
+          }
+              %
+              {' '}
+              <br />
+              <div className="completed">completed</div>
+            </h3>
+          </div>
+
+        </p>
+        <div className="d-flex chapter-details">
+          <h5 className="current-chapter">Current Chapter</h5>
+          <p>{getDummyChapter()}</p>
+          <button type="button" className="progress-btn">Update Progress</button>
+        </div>
+
       </div>
     </li>
   );

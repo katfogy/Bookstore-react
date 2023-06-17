@@ -33,18 +33,17 @@ export default function BookList() {
   }
 
   return (
-    <div>
-      <BookForm />
+    <div className="container-center mt-5">
       <p>{postStatus.loading ? 'Posting...' : ''}</p>
       <p>{delStatus.loading ? 'Deleting...' : ''}</p>
       <pre>{postStatus.error ? postStatus.errMsg : ''}</pre>
       <pre>{delStatus.error ? delStatus.errMsg : ''}</pre>
-      <h3>List of books:</h3>
       <ul>
         {bookItems.map((book) => (
           <Book key={book.id} id={book.id} book={book} />
         ))}
       </ul>
+      <BookForm />
     </div>
   );
 }
